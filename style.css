@@ -130,6 +130,14 @@ veriyoruz değere. */
   box-shadow: rgb(211, 211, 211) 0.7px 0.7px 0.7px 0px;
 }
 
-.main_language {
+.main__language {
   margin-top: 1.1rem;
+}
+
+/* .main__language a {
+  text-decoration: underline;
+} */
+
+.main_language--link {
+  text-decoration: underline;
 }
