@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Google Landing Page</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
@@ -51,14 +52,19 @@
           class="main__search-bar--magnifier"
           alt=""
         />
-        <input type="search" name="" class="main__search-bar--input" id="" />
+        <input
+          type="search"
+          name=""
+          class="main__search-bar--input"
+          id="form-search"
+        />
         <img
           src="./images/google_microphone.png"
           class="main__search-bar--mic"
           alt=""
         />
         <div class="">
-          <button class="main__buttons">Google Search</button>
+          <button class="main__buttons" id="searchBtn">Google Search</button>
           <button class="main__buttons">I'm Feeling Lucky</button>
         </div>
         <div class="main__language">
@@ -98,5 +104,17 @@
         </ul>
       </div>
     </footer>
+    <script>
+      //inputa yazdığımızı butona basıp googleda aratmak için gerekli js code bloğu
+      let query = document.querySelector("#form-search");
+      let searchBtn = document.querySelector("#searchBtn");
+
+      searchBtn.onclick = function (e) {
+        e.preventDefault();
+        let url = "https://www.google.com/search?q=" + query.value;
+        window.open(url, "_self");
+        query.value = "";
+      };
+    </script>
   </body>
 </html>
